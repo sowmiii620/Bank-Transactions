@@ -20,8 +20,6 @@ function showCreate() {
 // CREATE ACCOUNT
 function createAccount() {
 
-  date.textContent = new Date().toLocaleDateString();
-  document.body.style.backgroundColor = "#d5c5d5ff";
 
   const username = document.getElementById("newUser").value.trim();
   const password = document.getElementById("newPass").value;
@@ -47,6 +45,9 @@ function createAccount() {
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
 
+  date.textContent = new Date().toLocaleDateString();
+  document.body.style.backgroundColor = "#d5c5d5ff";
+
   showApp(newUser);
 }
 
@@ -55,20 +56,21 @@ function login() {
   const username = document.getElementById("loginUser").value.trim();
   const password = document.getElementById("loginPass").value;
 
-  date.textContent = new Date().toLocaleDateString();
-  document.body.style.backgroundColor = "#d5c5d5ff";
-  app.style.display="block";
+  
   
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
   const user = users.find(
     u => u.username === username && u.password === password
   );
-
   if (!user) {
     alert("Invalid login");
     return;
   }
+
+  date.textContent = new Date().toLocaleDateString();
+  document.body.style.backgroundColor = "#d5c5d5ff";
+  app.style.display="block";
 
   showApp(user);
 }
