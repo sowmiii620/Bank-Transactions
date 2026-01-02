@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="login-page" id="loginPage">
+  <h2>Login</h2>
+  <input type="text" id="loginUser" placeholder="Username">
+  <input type="password" id="loginPass" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p>
+    New user?
+    <a onclick="showCreate()">Create Account</a>
+  </p>
+</div>
+
+<!-- CREATE ACCOUNT PAGE -->
+<div class="create-page" id="createPage">
+  <h2>Create Account</h2>
+  <input type="text" id="newUser" placeholder="Username">
+  <input type="password" id="newPass" placeholder="Password">
+  <button onclick="createAccount()">Create</button>
+</div>
+
+
+
+<main class="app">
+  <!-- BALANCE -->
+  <div class="balance">
+   <div>
+      <p class="balance__label">Current balance</p>
+      <p class="balance__date">
+      As of <span class="date">05/03/2037</span>
+      </p>
+   </div>
+     <p class="balance__value">0000€</p>
+  </div>
+
+  <div class="app-1">
+   <!-- MOVEMENTS -->
+   <div class="movements">
+     <div class="movements__row movements__row-1">
+       <div class="movements__type movements__type--deposit"> deposit</div>
+       <div class="movements__date-1 movements__date">Date of Transaction</div>
+       <div class="movements__value-1 movements__value">0000€</div>
+     </div>
+     
+     <div class="movements__row-2">
+       <div class="movements__type movements__type--withdrawal">
+         withdrawal
+        </div>
+        <div class="movements__date-2">Date of Transaction</div>
+        <div class="movements__value-2">0000€</div>
+      </div>
+   </div>
+   <div class="transaction-div">
+     <!-- OPERATION: TRANSFERS -->
+     <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <div class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button onclick="transferMoney()" class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </div>
+     </div>
+
+     <!-- OPERATION: LOAN -->
+     <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <div class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button  class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </div>
+      </div>
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close">
+        <h2>Close account</h2>
+        <div class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </div>
+      </div>
+
+      </div>
+  </div>
+
+      
+      
+  <!-- SUMMARY -->
+  <div class="summary">
+    <p class="summary__label">In</p>
+    <p class="summary__value summary__value--in">0000€</p>
+    <p class="summary__label">Out</p>
+    <p class="summary__value summary__value--out">0000€</p>
+    <p class="summary__label">Interest</p>
+    <p class="summary__value summary__value--interest">0000€</p>
+    <button class="btn--sort">&downarrow; SORT</button>
+  </div>
+
+     
+  <!-- LOGOUT TIMER
+  <p class="logout-timer">
+  You will be logged out in <span class="timer">05:00</span>
+  </p> -->
+</main>
+
+<script src="./bank.js"></script>
+</body>
+</html>
+
