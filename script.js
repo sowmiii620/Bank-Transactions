@@ -57,6 +57,7 @@ function login() {
 
   date.textContent = new Date().toLocaleDateString();
   document.body.style.backgroundColor = "#d5c5d5ff";
+  app.style.display="block";
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
   const user = users.find(

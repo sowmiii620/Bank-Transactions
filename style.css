@@ -78,7 +78,6 @@ body {
 }
 
 .app {
-  
   display: none;
   transition: all 1s;
 }
