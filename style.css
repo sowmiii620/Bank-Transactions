@@ -47,6 +47,7 @@ body {
 
 .login-page a{
   color: #77147a;
+  display: flex;
 }
 
 .login-page input,
@@ -357,7 +358,7 @@ h2 {
   }
 
   .app{
-    display: grid;
+    display: none;
     
   }
 
@@ -403,7 +404,7 @@ h2 {
   } 
 
   .app {
-    display: block;
+    display: none;
     padding-bottom: 80px; 
   }
 
