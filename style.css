@@ -47,7 +47,6 @@ body {
 
 .login-page a{
   color: #77147a;
-  display: flex;
 }
 
 .login-page input,
@@ -346,6 +345,7 @@ h2 {
     margin: 45% 25%;
     width: 50%;
     padding-left: 20px;
+    height: 100%;
   }
 
   .create-page{
@@ -383,7 +383,7 @@ h2 {
     margin: 250px 50px;
     width: 80%;
     padding-left: 20px;
-    
+    height: 100%;
   }
 
   body {
